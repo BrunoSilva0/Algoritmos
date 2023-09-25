@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+</head>
+<body>
+    <button onclick="moverEsq()">Mover p/ a esquerda</button>
+    <button onclick="moverDir()">Mover p/ a direita</button>
+    Quantos pixels:
+    <input type="text" id="input_pixelsCustom"> <br><br>
+    <img id="img_bart" src="https://i.pinimg.com/originals/df/62/07/df6207c0a57faf0768f55441abb77546.jpg" style="height: 300px;">
+</body>
+</html>
+
+<script>
+    var direcao = 0
+    
+    function moverEsq() {
+        direcao -= 10
+        var px = Number(input_pixelsCustom.value)
+        direcao -= px
+        img_bart.style.marginLeft = direcao + "px"
+    }
+    function moverDir() {
+        direcao += 10
+        var px = Number(input_pixelsCustom.value)
+        direcao += px
+        img_bart.style.marginLeft = direcao + "px"
+    }
+</script>

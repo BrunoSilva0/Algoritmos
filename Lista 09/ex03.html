@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03</title>
+</head>
+<body>
+    <div style="background-color: blue; color: white;">
+        <label id="lbl_saldo">
+            Total guardado no cofrinho: R$0
+        </label> <br>
+        <label id="lbl_depositos">
+            Depósitos efetuados: 0
+        </label> <br>
+        <label id="lbl_retiradas">
+            Retiradas efetuadas: 0
+        </label> <br>
+    </div>
+    <button onclick="depositar050()">
+        Depositar 0,50
+    </button>
+    <button onclick="depositar2()">
+        Depositar 2,00
+    </button>
+    <button onclick="retirar050()">
+        Retirar 0,50
+    </button> <br> <br>
+
+    <input type="text" id="input_retirar"> Retirar valor
+    <button onclick="retirar()">
+        Retirar
+    </button>
+</body>
+</html>
+
+<script>
+    var saldo = 0
+    var depositos = 0
+    var retiradas = 0
+
+    function depositar050() {
+        saldo += 0.50
+        depositos += 1
+        lbl_saldo.innerHTML = `
+        Total guardado no cofrinho: R$${saldo}
+        `
+        lbl_depositos.innerHTML = `
+        Depósitos efetuados: ${depositos}
+        `
+    }
+    function depositar2() {
+        saldo += 2
+        depositos += 1
+        lbl_saldo.innerHTML = `
+        Total guardado no cofrinho: R$${saldo}
+        `
+        lbl_depositos.innerHTML = `
+        Depósitos efetuados: ${depositos}
+        `
+    }
+    function retirar050() {
+        saldo -= 0.50
+        retiradas += 1
+        lbl_saldo.innerHTML = `
+        Total guardado no cofrinho: R$${saldo}
+        `
+        lbl_retiradas.innerHTML = `
+        Retiradas efetuadas: ${retiradas}
+        `
+    }
+    function retirar() {
+        saldo -= Number(input_retirar.value)
+        retiradas += 1
+        lbl_saldo.innerHTML = `
+        Total guardado no cofrinho: R$${saldo}
+        `
+        lbl_retiradas.innerHTML = `
+        Retiradas efetuadas: ${retiradas}
+        `
+    }
+</script>

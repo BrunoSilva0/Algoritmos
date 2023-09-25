@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+</head>
+<body>
+    <div id="imagem">
+        <img src="https://i.redd.it/xgn9cucxz8hb1.jpg" alt="👍" style="height: 100px;">
+    </div>
+    <button onclick="aumentarTam()">Aumentar tamanho</button>
+    <button onclick="diminuirTam()">Diminuir tamanho</button>
+</body>
+</html>
+
+<script>
+    var tamanho = 100
+
+    function aumentarTam() {
+        tamanho += 10
+        imagem.innerHTML = `
+        <img src="https://i.redd.it/xgn9cucxz8hb1.jpg" alt="👍" style="height: ${tamanho}px;">
+        ` 
+    }
+    function diminuirTam() {
+        tamanho -= 10
+        imagem.innerHTML = `
+        <img src="https://i.redd.it/xgn9cucxz8hb1.jpg" alt="👍" style="height: ${tamanho}px;">
+        `
+    }
+</script>

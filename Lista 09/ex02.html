@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<body>
+    Informe o seu salário:
+    <input type="number" id="input_salario"> <br>
+    <button onclick="gerenciarSalario()">
+        Confirmar salário
+    </button> 
+
+    <button onclick="conta100()">
+        Pagar conta de 100
+    </button>
+
+    <button onclick="conta500()">
+        Pagar conta de 500
+    </button>
+
+    <button onclick="ganhar200()">
+        Ganhar na loteria 2000 conto
+    </button>
+    <br>
+    <div id="saldoTotal"></div>
+</body>
+</html>
+
+<script>
+    var saldo = 0
+    function gerenciarSalario() {
+        var dinheiro = Number(input_salario.value)
+        saldo = dinheiro
+        saldoTotal.innerHTML = `
+        R$${saldo}
+        `
+    }
+    function conta100() {
+        saldo -= 100
+        saldoTotal.innerHTML = `
+        R$${saldo}
+        `
+    }
+    function conta500() {
+        saldo -= 500
+        saldoTotal.innerHTML = `
+        R$${saldo}
+        `
+    }
+    function ganhar200() {
+        saldo +=2000
+        saldoTotal.innerHTML = `
+        R$${saldo}
+        `
+    }
+</script>
