@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ex05</title>
-</head>
-<body>
-    <button onclick="loop()">
-        Números cabalísticos
-    </button>
+  </head>
+  <body>
+    <button onclick="loop()">Números cabalísticos</button>
 
     <div id="divRepetir"></div>
-</body>
+  </body>
 </html>
 
 <script>
-    function loop() {
-        var repeticao = 1
-        divRepetir.innerHTML += ` `
-        
-        while (repeticao <= 30) {
-            if (repeticao == 3 || repeticao == 4 || repeticao == 7 || repeticao == 10 || repeticao == 12) {
-                divRepetir.innerHTML += ` `
-                repeticao += 1
-            } else {
-            divRepetir.innerHTML += `${repeticao} <br>`
-            repeticao += 1
-            }
-        }
+  function loop() {
+    var repeticao = 1;
+    divRepetir.innerHTML += ` `;
+
+    while (repeticao <= 30) {
+      if (
+        repeticao == 3 ||
+        repeticao == 4 ||
+        repeticao == 7 ||
+        repeticao == 10 ||
+        repeticao == 12
+      ) {
+        divRepetir.innerHTML += ``;
+        repeticao += 1;
+      } else {
+        divRepetir.innerHTML += `${repeticao} <br>`;
+        repeticao += 1;
+      }
     }
+  }
 </script>
