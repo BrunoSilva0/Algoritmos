@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex12</title>
+</head>
+<body>
+    Qual tabuada deseja ver?
+    <select id="input_tabuada">
+        <option value="">-</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select> <br>
+    <button onclick="calcularTabuada()">
+        Ver tabuada
+    </button>
+    <div id="mostrarTabuada"></div>
+</body>
+</html>
+
+<script>
+    function calcularTabuada() {
+        var tabuada = Number(input_tabuada.value);
+        var numero = 1;
+        var resultado = 0
+
+        mostrarTabuada.innerHTML = ``
+
+        // 1,3,5,7,9,11
+
+        while (numero <= 12) {
+            resultado = tabuada * numero
+            mostrarTabuada.innerHTML += `${tabuada} x ${numero} = ${resultado} <br>`
+            numero += 1
+        }
+    }
+</script>
