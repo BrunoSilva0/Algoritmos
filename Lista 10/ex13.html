@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex13</title>
-</head>
-<body>
-    
-</body>
+<html>
+
+    <body>
+        <h2>Rotina de Musculação</h2>
+
+        <p>De quantos em quantos dias você faz musculação?</p>
+        <input type="number" id="input_numero" value="3" />
+        <button onclick="mostrarRotina()">Exibir rotina mensal</button>
+
+        <p id="rotina"></p>
+
+        <script>
+            function mostrarRotina() {
+                var dias = Number(input_numero.value);
+                var texto = "";
+                var repeticao = 1;
+                while (repeticao <= 30) {
+                    if (repeticao % dias == 1) {
+                        texto += "Dia " + repeticao + " - Musculação<br>";
+                    } else {
+                        texto += "Dia " + repeticao + " - Comer, dormir etc<br>";
+                    }
+                    repeticao += 1;
+                }
+                rotina.innerHTML = texto;
+            }
+        </script>
+    </body>
+
 </html>
