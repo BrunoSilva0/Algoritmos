@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Insira um número entre 0 e 200:</p>
+        <input id="input_num" type="number" min="0" max="200">
+        <button onclick="mostrarMultiplos()">Viva o 7!</button>
+        <p id="output"></p>
+
+        <script>
+            function mostrarMultiplos() {
+                var num = Number(input_num.value);
+                var texto = "";
+                var repeticao = 0;
+                while (repeticao <= num) {
+                    if (repeticao % 7 == 0) {
+                        texto += repeticao + "<br>";
+                    }
+                    repeticao += 1;
+                }
+                output.innerHTML = texto;
+            }
+        </script>
+    </body>
+</html>

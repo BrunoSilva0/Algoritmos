@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Insira o início do intervalo:</p>
+        <input id="input_comeco" type="number">
+        <p>Insira o fim do intervalo:</p>
+        <input id="input_final" type="number">
+        <button onclick="showEvenNumbers()">S2 Pares</button>
+        <p id="output"></p>
+
+        <script>
+            function showEvenNumbers() {
+                var comeco = Number(input_comeco.value);
+                var final = Number(input_final.value);
+                var texto = "";
+                var repeticao = comeco;
+                while (repeticao <= final) {
+                    if (repeticao % 2 == 0) {
+                        texto += repeticao + "<br>";
+                    }
+                    repeticao += 1;
+                }
+                output.innerHTML = texto;
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Insira um número:</p>
+        <input id="input_num" type="number">
+        <p>Insira uma frase:</p>
+        <input id="input_texto" type="text">
+        <button onclick="repeatText()">Papagaio</button>
+
+        <script>
+            function repeatText() {
+                var num = Number(input_num.value);
+                var texto = input_texto.value;
+                var repeticao = 0;
+                while (repeticao < num) {
+                    alert(texto);
+                    repeticao += 1;
+                }
+            }
+        </script>
+        
+    </body>
+</html>
