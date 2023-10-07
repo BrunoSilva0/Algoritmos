@@ -16,7 +16,7 @@
                 var texto = "";
                 var repeticao = 1;
                 while (repeticao <= 30) {
-                    if (repeticao % dias == 1) {
+                    if (repeticao % dias == 0 || repeticao == 1) {
                         texto += "Dia " + repeticao + " - Musculação<br>";
                     } else {
                         texto += "Dia " + repeticao + " - Comer, dormir etc<br>";
