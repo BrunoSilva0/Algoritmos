@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex22</title>
+</head>
+<body>
+    Quantos depósitos foram feitos?
+    <input type="text" id="input_depositos"> <br>
+    Valor de cada depósito:
+    <input type="text" id="input_valor"> <br>
+    <button onclick="acompanharGrana()">
+        Acompanhar grana
+    </button> <br>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function acompanharGrana() {
+        var depositos = Number(input_depositos.value);
+        var valorOriginal = Number(input_valor.value);
+        var valorAlterado = valorOriginal
+
+        resultado.innerHTML = ""
+
+        var repeticao = 1;
+        while (repeticao <= depositos) {
+            valorAlterado = valorAlterado + valorOriginal;
+            
+            if (repeticao % 3 == 0) {
+                valorAlterado *= 1.01
+                resultado.innerHTML += `${repeticao}° Mês: R$${valorAlterado} <img src="https://media.istockphoto.com/id/1295967422/pt/vetorial/five-point-star-vector-icon-isolated-gold-star-rating-flat-symbol-vector.jpg?s=612x612&w=0&k=20&c=PHq95jOU5Ef1_t-rbXzygPEdBAbeocBle4ma7BxFFB4=" style="height: 15px;"/> <br>`
+            } else {
+                resultado.innerHTML += `${repeticao}° Mês: R$${valorAlterado} <br>`
+
+            }
+            repeticao++            
+        }
+        resultado.innerHTML += `Resultado guardado: R$${valorAlterado}`
+    }
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex23</title>
+</head>
+<body>
+    Limite inferior:
+    <input type="text" min="1" default="1" id="input_inferior"> <br>
+    Limite superior:
+    <input type="text" max="99" default="2" id="input_superior"> <br>
+    Testar divisibilidade:
+    <input type="text" min="3" max="10" id="input_divisibilidade"> <br>
+
+    <button onclick="contar()">
+        Contar
+    </button>
+
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function contar() {
+        var limInferior = Number(input_inferior.value);
+        var limSuperior = Number(input_superior.value);
+        var divisibilidade = Number(divisibilidade);
+
+        var qtdTotalExibido = 0
+        var somaNumerosExibidos = 0
+        var mediaNumerosExibidos = 0
+        var maiorNumeroExibido = 0
+        var menorNumeroExibido = 0
+
+        if (limInferior >= 1) {
+            if (limSuperior >= 100 && limSuperior > limInferior) {
+                if (divisibilidade >= 3 && divisibilidade <= 10) {
+                    while (limInferior <= limSuperior) {
+                        
+                        // QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS
+                        if (limInferior % limSuperior == 0) {
+                            qtdTotalExibido += 1
+                        }
+                        
+                        // SOMATÓRIO DOS NÚMEROS EXIBIDOS
+                        somaNumerosExibidos = qtdTotalExibido + qtdTotalExibido
+
+                        //MÉDIA DOS NÚMEROS EXIBIDOS
+
+
+                        // MAIOR NÚMERO EXIBIDO
+
+
+                        // MENOR NÚMERO EXIBIDO
+
+                        
+
+                        limInferior++
+                    }
+                } else {
+                    alert ("Número de teste de divisibilidade inválido, insira um número que esteja entre 3 e 10")
+                }
+            } else {
+                alert ("Número superior inválido, insira um número maior ou igual a 100 que seja maior que o limite inferior")
+            }
+        } else {
+            alert("Número inferior inválido, insira um número maior ou igual a 1")
+        }
+    }
+</script>
