@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex26</title>
+</head>
+<body>
+    Solicitar par:
+    <input type="text" id="input_numeroPar"> <br>
+    <button onclick="somarPares()">
+        Somar pares
+    </button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function somarPares() {
+        var numeroPar = Number(input_numeroPar.value);
+        var repeticao = 1
+        resultado.innerHTML = ``
+
+        if (numeroPar >= 10 && numeroPar <= 500){
+            while (repeticao <= numeroPar) {
+                if (repeticao % 2 == 0) {
+                    resultado.innerHTML += `${repeticao} <br>`
+                }
+                repeticao++
+            }
+            repeticao = 1
+            resultado.innerHTML += `<br>Soma dos pares:<br>`
+
+            soma = 0
+
+            while (repeticao <= numeroPar) {
+                if (repeticao % 2 == 0) {
+                    soma += repeticao
+                }
+                repeticao++
+            }
+            resultado.innerHTML += `${soma} <br>`
+        } else {
+            alert("Número deve estar entre 10 e 500")
+        }
+    }
+</script>

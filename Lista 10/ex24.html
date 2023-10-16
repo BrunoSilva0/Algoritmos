@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex24</title>
+</head>
+<body>
+    Inserir divisior:
+    <input type="number" min="0" max="100" id="input_divisor"> <br>
+    <button onclick="verDivisores()">
+        Ver divisores
+    </button>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function verDivisores() {
+        var divisor = Number(input_divisor.value);
+        repeticao = 1;
+        div_resultado.innerHTML = ``
+        
+        while (repeticao <= divisor){
+            if (repeticao % divisor == 0) {
+                div_resultado.innerHTML += `${repeticao} <br>`;
+            }
+            repeticao += 1
+        }
+    }
+</script>
