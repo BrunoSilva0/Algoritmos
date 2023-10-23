@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv</title>
+</head>
+
+<body>
+    <h3>--------- Abrir o Quiosque ---------</h3>
+
+    Água engarrafada:
+    <input type="text" id="input_agua_engarrafada"> <br>
+    Coco fechado:
+    <input type="text" id="input_coco_fechado"> <br>
+
+    <button onclick="controleVendas()">
+        Abrir quiosque
+    </button> <br>
+
+    <div id="mensagem"></div>
+
+
+    <h3>--------- Registro das Operações de venda --------- </h3>
+
+    Entre com a quantidade vendida:
+    <input id="input_qtdVendida"> Informe o produto vendido:
+
+    <select id="prodVend">
+        <option value="Agua Engarrafada">Água engarrafada</option>
+        <option value="Coco Fechado">Coco Fechado</option>
+    </select>
+
+    <button></button>
+
+</body>
+
+</html>
+
+<script>
+    var aguaEngarrafada
+    var cocoFechado
+
+
+    function controleVendas() {
+        aguaEngarrafada = Number(input_agua_engarrafada.value);
+        cocoFechado = Number(input_coco_fechado.value);
+
+        if (aguaEngarrafada < 100) {
+            alert("Com essa quantidade de Água engarrafada não dá para abrir o quiosque");
+        } else if (cocoFechado < 200) {
+            alert("Com essa quantidade de Coco fechado não dá para abrir o quiosque")
+        } else {
+            if (aguaEngarrafada > 100 && aguaEngarrafada < 1000) {
+                alert("Engarrafe mais água de coco")
+
+                if (cocoFechado > 200 && cocoFechado < 2000) {
+                    alert("Compre mais cocos")
+                }
+
+                mensagem.innerHTML =
+                    `
+                    <h3>---------- Estoque Inicial ----------</h3> 
+        
+                    Água engarrafada: <b>${aguaEngarrafada}</b> <br>
+                    Coco fechado: <b>${cocoFechado}</b><br>
+                `
+            }
+        }
+
+    }
+
+
+</script>
