@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03</title>
+</head>
+<body>
+    Cadastrar Bairro: 
+    <input id="input_cadastrarBairro"> <br>
+    <button onclick="cadastrarBairro()">
+        Cadastrar Bairro
+    </button>
+
+    <hr>
+    <br>
+
+    Ordem de moradia:
+    <input id="input_ordemMoradia"> <br>
+    <button onclick="relembrarMoradia()">
+        Relembrar Moradia
+    </button>
+
+    <div id="div1"></div>
+</body>
+</html>
+
+<script>
+    listaMoradias = [];
+
+    function cadastrarBairro() {
+        var bairro = input_cadastrarBairro.value;
+        listaMoradias.push(bairro);
+    }
+
+    function relembrarMoradia() {
+        var ordemBairro = Number(input_ordemMoradia.value) - 1;
+        
+        if (listaMoradias.length - 1 >= ordemBairro) {
+            div1.innerHTML = `${listaMoradias[ordemBairro]}`
+        } else {
+            div1.innerHTML = `Você ainda não morou num ${ordemBairro + 1}º bairro!`
+        }
+    }
+</script>

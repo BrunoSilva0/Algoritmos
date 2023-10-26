@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<body>
+    Destino de viagem:
+    <input type="text" id="input_destino">
+    <button onclick="destinosViagem()">
+        Adicionar
+    </button> <br> <br>
+
+    <button onclick="primViagem()">
+        Primeira Viagem
+    </button>
+
+    <button onclick="tercViagem()">
+        Terceira Viagem
+    </button>
+
+    <button onclick="ultmViagem()">
+        Última Viagem
+    </button>
+
+    <div id="div1"></div>
+</body>
+</html>
+
+<script>
+    var lugares = []
+
+    function destinosViagem() {
+        var destino = input_destino.value;
+        lugares.push(destino);
+    }
+
+    function primViagem() {
+        if (lugares.length > 0) {
+            div1.innerHTML = lugares[0]
+        } else {
+            div1.innerHTML = `Ainda não viajou`
+        }
+    }
+
+    function tercViagem() {
+        if (lugares.length > 0) {
+            div1.innerHTML = lugares[2]
+        } else {
+            div1.innerHTML = `Ainda não viajou`
+        }
+    }
+    
+    function ultmViagem() {
+        if (lugares.length > 0) {
+            var ultimaViagem = lugares.length - 1
+            
+            div1.innerHTML = lugares[ultimaViagem]
+        } else {
+            div1.innerHTML = `Ainda não viajou`
+        }
+    }
+</script>
