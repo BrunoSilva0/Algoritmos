@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08</title>
+</head>
+<body>
+    Cadastar aluno:
+    <input id="input_cadstrAluno"> <br>
+    <button onclick="cadastarAlunos()">
+        Cadastre
+    </button>
+
+    <div id="div1"></div>
+</body>
+</html>
+
+<script>
+    var listaAlunos = []
+
+    function cadastarAlunos() {
+        var cadastrarAluno = input_cadstrAluno.value;
+        listaAlunos.push(cadastrarAluno)
+        div1.innerHTML = ''
+
+        for (var contador = listaAlunos.length - 1; contador > -1; contador -= 1) {
+            div1.innerHTML += `${listaAlunos[contador]} <br>`;
+        }
+    }
+</script>

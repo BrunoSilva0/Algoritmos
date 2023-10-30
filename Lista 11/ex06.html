@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06</title>
+</head>
+<body>
+    Informe seus filmes favoritos:
+    <input id="input_filmes_favoritos"> <br>
+    <button onclick="cadastrarFilme()">
+        Cadastrar
+    </button>
+
+    <div id="div1"></div>
+</body>
+</html>
+
+<script>
+    var listaFilmes = []
+    var contador = 0
+
+    function cadastrarFilme() {
+        var filmeFavorito = input_filmes_favoritos.value 
+        listaFilmes.push(filmeFavorito)
+        div1.innerHTML += `${listaFilmes[contador]} <br>`
+
+        contador += 1
+    }
+
+</script>
