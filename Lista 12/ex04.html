@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04</title>
+</head>
+<body>
+    <button onclick="sortearNota()">
+        Sortear nota para aluno
+    </button>
+    <div id="mostrarNota"></div>
+</body>
+</html>
+
+<script>
+    function sortearNota() {
+        var numero = (Math.random() * 11).toFixed(1);
+        if (numero >= 10) {
+            numero = parseInt(numero)
+            mostrarNota.innerHTML = numero;
+        } else {
+            mostrarNota.innerHTML = numero;
+        }
+    }
+</script>

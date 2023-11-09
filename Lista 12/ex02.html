@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+</head>
+<body>
+    <button onclick="sortearTime()">
+        Sortear time
+    </button>
+    <div id="mostrarTime"></div>
+</body>
+</html>
+
+<script>
+    function sortearTime() {
+        var numero = parseInt(Math.random() * 4);
+
+        if (numero == 0) {
+            mostrarTime.innerHTML = `<img src="https://logodownload.org/wp-content/uploads/2016/11/Corinthians-logo-escudo.png" style="height: 150px" />`
+        }
+        else if (numero == 1) {
+            mostrarTime.innerHTML = `<img src="https://cdn.freebiesupply.com/logos/large/2x/santos-futebol-clube-de-alegrete-rs-logo-png-transparent.png" style="height: 150px" />`
+        }
+        else if (numero == 2) {
+            mostrarTime.innerHTML = `<img src="https://logodownload.org/wp-content/uploads/2016/09/flamengo-logo-escudo-novo.png" style="height: 150px" />`
+        }
+        else if (numero == 3) {
+            mostrarTime.innerHTML = `<img src="https://w7.pngwing.com/pngs/177/904/png-transparent-sociedade-esportiva-palmeiras-campeonato-paulista-copa-do-brasil-choque-rei-paulista-derby-futebol-brasil-emblem-sport-logo.png" style="height: 150px" />`
+        }
+    }
+</script>
